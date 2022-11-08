@@ -91,25 +91,67 @@
     <!-- model 3 -->
 
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-        Launch static backdrop modal
+    <button id="bt3" type="button" class="btn btn-primary" data-bs-toggle="modal3" data-bs-target="#staticBackdrop">
+        modal 3
     </button>
 
     <!-- Modal -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
+    <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+        <div class="modal-dialog" >
+            <div class="modal-content" style="width: 700px;">
                 <div class="modal-header">
                     <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-dialog modal-dialog-scrollable">
-                    ...
+                <div class="model-body">
+                    <select id="select2" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                        <option selected="selected" class="select2"></option>
+
+                    </select>
+                    
+                    <select id="select3" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                        <option selected="selected" class="select3"></option>
+
+                    </select>
+                    <form action="" id="form3">
+                        <label for="">Choose a Type of field :</label>
+                        <input class="head3" type="text" value="" name="heading" id="input3"><br><br>
+
+                        <label for="">Enter field label :</label>
+                        <input type="text"><br><br>
+
+                        <label for="">Enter field Class :</label>
+                        <input type="text"><br><br>
+
+                        <label for="">Enter value of field :</label>
+                        <input type="text"><br><br>
+
+                        <label for="">Enter Placeholder value :</label>
+                        <input type="text"><br><br>
+
+                        <label for="">Enter option for field :</label>
+                        <input type="text"><br><br>
+
+                        <label for="">Choose :</label>
+                        <input type="checkbox" value="Required">
+                        <label for="Requered">Required</label>
+
+                        <input type="checkbox" value="Read only">
+                        <input type="checkbox" value="Disable"><br><br>
+
+                        <label for="Gender">Gender :</label>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="Female">
+                        <label for="female">Female</label><br><br>
+
+                        <button id="bt3" data-bs-toggle="modal">submit</button>
+                    </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Understood</button>
+                    <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">submit</button> -->
                 </div>
             </div>
         </div>

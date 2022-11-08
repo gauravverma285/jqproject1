@@ -22,50 +22,56 @@ $(document).ready(function () {
 
             $("#ram1").append("<option value=" + (index + 1) + ">" + $(this).text() + "</option>");
             // $(".ram2").append("<section><h1>" + head + "</h1></section>");
-            console.log(`${this.index} : ${this.value}`);
+            console.log(index, value);
 
         })
 
-        $("#users1").submit(function (event) {
-            event.preventDefault();
-            var subheading = $("#heading1").val();
-            if (subheading == "") {
-                alert("This field is required")
-                return false;
-            }
-            else {
-                var head = $("#ram1 option:selected").val();
-                $("main section:nth-child(" + head + ") ").append("<div><h3>" + subheading + "</h3></div>");
-                console.log(subheading);
-            }
-        })
-            // Create New Option.
-            // var newOption = $('<option>');
-            // newOption.attr('value', head).text(head);
+        $('main section h1').each(function (index, value) {
 
-            // // Append that to the DropDownList.
-            // $('#ram1').append(newOption);
-
-            // // Select the Option.
-            // $("#ram1 > [value=" + head + "]").attr("selected", "true");
-
-            // $("#users1").submit(function (event) {
-            //     event.preventDefault();
-
-            //     var sub1 = $("#heading1").val();
-
-            //     var head = $("#ram1 option:selected").val();
-            //     //$("#bt2").click(function () {
-            //     $("main section h1").append("<div><h5> " + sub1 + "</h5></div>");
-            //     //})
-
-            // })
-
-
+            $("#select2").append("<option value=" + (index + 1) + ">" + $(this).text() + "</option>");
+            // $(".ram2").append("<section><h1>" + head + "</h1></section>");
+            console.log(index, value);
 
         })
-        // $("#bt1").click(function () {
-        //     $("#users").modal('reset');
-        // });
 
+        $('main section div h3').each(function (index, value) {
+
+            $("#select3").append("<option value=" + (index + 1) + ">" + $(this).text() + "</option>");
+            // $(".ram2").append("<section><h1>" + head + "</h1></section>");
+            console.log(index, value);
+
+        })
+        
     })
+
+    $("#users1").submit(function (event) {
+        event.preventDefault();
+        var subheading = $("#heading1").val();
+        if (subheading == "") {
+            alert("This field is required")
+            return false;
+        }
+        else {
+            var head = $("#ram1 option:selected").val();
+            //$("option").remove();
+            $("main section:nth-child(" + head + ") ").append("<div><h3>" + subheading + "</h3></div>");
+            console.log(subheading);
+        }
+    });
+
+    $("#bt3").click(function () {
+        $("#staticBackdrop1").modal('show');
+    });
+
+    // $("#form3").submit(function (event) {
+    //     event.preventDefault();
+
+    //     $('main section h1').each(function (index, value) {
+
+    //         $("#select2").append("<option value=" + (index + 1) + ">" + $(this).text() + "</option>");
+    //         console.log(index, value);
+
+    //     });
+    // });
+
+});
