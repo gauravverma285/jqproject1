@@ -34,14 +34,8 @@ $(document).ready(function () {
 
         })
 
-        $('main section div h3').each(function (index, value) {
 
-            $("#select3").append("<option value=" + (index + 1) + ">" + $(this).text() + "</option>");
-            // $(".ram2").append("<section><h1>" + head + "</h1></section>");
-            console.log(index, value);
 
-        })
-        
     })
 
     $("#users1").submit(function (event) {
@@ -57,10 +51,25 @@ $(document).ready(function () {
             $("main section:nth-child(" + head + ") ").append("<div><h3>" + subheading + "</h3></div>");
             console.log(subheading);
         }
+
+        $('main section div h3').each(function (index, value) {
+
+            $("#select3").append("<option value=" + (index + 1) + ">" + $(this).text() + "</option>");
+            // $(".ram2").append("<section><h1>" + head + "</h1></section>");
+            console.log(index, value);
+
+        });
     });
 
     $("#bt3").click(function () {
         $("#staticBackdrop1").modal('show');
+    });
+
+    $("#form3").submit(function (event) {
+        event.preventDefault();
+
+        
+
     });
 
     // $("#form3").submit(function (event) {
