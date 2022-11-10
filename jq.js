@@ -68,7 +68,28 @@ $(document).ready(function () {
     $("#form3").submit(function (event) {
         event.preventDefault();
 
+        // var type1 = $("#select4 option:selected").val();
+        //     //$("option").remove();
+        //     $("main section form").append("<input type="+type1+">");
+    
+
+        var label = $("#one").val();
+        $("main").append("<section><form><label> " + label + "</label></form><section>")
+        console.log(label);
+
+        var type1 = $("#select4 option:selected").val();
+        var class1 = $("#two").val();
+        var value1 = $("#three").val();
+        var place1 = $("#four").val();
+        $("main section form").append("<input type="+type1+" class="+class1+" value="+value1+" placeholder="+place1+">")
+
+        // var value1 = $("#three").val();
+        // $("main section form").append("<input class="+class1+">")
+
         
+        // var placeholder = $("#four").val();
+        // $("main section input").append("<input placeholder "+placeholder+">")
+        // console.log(placeholder);
 
     });
 
